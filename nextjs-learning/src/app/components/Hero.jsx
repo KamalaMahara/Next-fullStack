@@ -1,12 +1,12 @@
 export default function Hero() {
   return (
     <>
-      <section className="bg-gradient-to-r from-green-50 to-green-100 py-20">
-        <div className="max-w-7xl mx-auto px-6 lg:px-8 flex flex-col md:flex-row items-center">
+      <section className="bg-gradient-to-r from-green-50 to-green-100 py-24 ">
+        <div className="max-w-7xl  mx-auto px-6 lg:px-2  flex flex-col md:flex-row items-center">
 
 
           <div className="md:w-1/2 text-center md:text-left">
-            <h1 className="text-4xl md:text-5xl font-bold text-gray-800 leading-tight">
+            <h1 className="text-4xl md:text-6xl font-bold text-gray-800 leading-tight">
               Discover Delicious Recipes <br />
               <span className="text-green-600">Made Just for You</span>
             </h1>

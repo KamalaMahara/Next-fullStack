@@ -1,3 +1,6 @@
+import Image from "next/image";
+import Link from "next/link";
+
 export default function Navbar() {
   return (
     <>
@@ -7,15 +10,31 @@ export default function Navbar() {
 
 
             <div className="flex-shrink-0 flex items-center">
-              <a href="/" className="text-2xl font-bold text-green-600">RecipeShare</a>
+              <a href="/" className="flex items-center gap-2">
+                <Image
+                  src="/receipe.png"
+                  alt="RecipeShare Logo"
+                  width={100}
+                  height={60}
+                  className="object-contain"
+                />
+                <span className="text-xl font-bold text-green-600">
+                  RecipeShare
+                </span>
+              </a>
             </div>
 
 
             <div className="hidden md:flex space-x-8 items-center">
-              <a href="/" className="text-gray-700 hover:text-green-600 font-medium">Home</a>
-              <a href="/recipes" className="text-gray-700 hover:text-green-600 font-medium">Recipes</a>
-
-              <a href="/create" className="text-gray-700 hover:text-green-600 font-medium">Create Recipe</a>
+              <Link href="/" className="text-gray-700 hover:text-green-600 font-medium">
+                Home
+              </Link>
+              <Link href="/recipes" className="text-gray-700 hover:text-green-600 font-medium">
+                Recipes
+              </Link>
+              <Link href="/create" className="text-gray-700 hover:text-green-600 font-medium">
+                Create Recipe
+              </Link>
             </div>
 
 
@@ -27,7 +46,9 @@ export default function Navbar() {
                   🔍
                 </button>
               </div>
-              <a href="/login" className="bg-green-600 text-white px-4 py-2 rounded-full hover:bg-green-700 transition">Login</a>
+              <Link href="/login" className="bg-green-600 text-white px-4 py-2 rounded-full hover:bg-green-700 transition">
+                Login
+              </Link>
             </div>
 
 
@@ -41,11 +62,21 @@ export default function Navbar() {
 
 
         <div id="mobile-menu" className="hidden md:hidden bg-white shadow-md">
-          <a href="/" className="block px-4 py-2 text-gray-700 hover:bg-green-50">Home</a>
-          <a href="/recipes" className="block px-4 py-2 text-gray-700 hover:bg-green-50">Recipes</a>
-          <a href="/categories" className="block px-4 py-2 text-gray-700 hover:bg-green-50">Categories</a>
-          <a href="/about" className="block px-4 py-2 text-gray-700 hover:bg-green-50">About</a>
-          <a href="/login" className="block px-4 py-2 text-green-600 font-semibold hover:bg-green-50">Login</a>
+          <Link href="/" className="block px-4 py-2 text-gray-700 hover:bg-green-50">
+            Home
+          </Link>
+          <Link href="/recipes" className="block px-4 py-2 text-gray-700 hover:bg-green-50">
+            Recipes
+          </Link>
+          <Link href="/categories" className="block px-4 py-2 text-gray-700 hover:bg-green-50">
+            Categories
+          </Link>
+          <Link href="/about" className="block px-4 py-2 text-gray-700 hover:bg-green-50">
+            About
+          </Link>
+          <Link href="/login" className="block px-4 py-2 text-green-600 font-semibold hover:bg-green-50">
+            Login
+          </Link>
         </div>
       </nav>
 
