@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 const ShareRecipeCTA = () => {
   return (
     <section className="bg-gradient-to-r from-green-100 to-green-50 py-16">
@@ -11,11 +13,11 @@ const ShareRecipeCTA = () => {
           <p className="text-gray-600 mb-6">
             Share your favorite dishes with the community and inspire others to cook something amazing.
           </p>
-          <a href="/create">
+          <Link href="/create">
             <button className="bg-green-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-green-700 transition-colors shadow-md">
               Share Your Recipe
             </button>
-          </a>
+          </Link>
         </div>
 
         {/* Right Image */}

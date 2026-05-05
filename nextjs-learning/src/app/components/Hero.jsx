@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 export default function Hero() {
   return (
     <>
@@ -27,12 +29,12 @@ export default function Hero() {
 
 
             <div className="mt-8 flex space-x-4 justify-center md:justify-start">
-              <a href="/recipes" className="bg-green-600 text-white px-6 py-3 rounded-full font-semibold hover:bg-green-700 transition">
+              <Link href="/recipes" className="bg-green-600 text-white px-6 py-3 rounded-full font-semibold hover:bg-green-700 transition">
                 Explore Recipes
-              </a>
-              <a href="/signup" className="bg-white border border-green-600 text-green-600 px-6 py-3 rounded-full font-semibold hover:bg-green-50 transition">
+              </Link>
+              <Link href="/signup" className="bg-white border border-green-600 text-green-600 px-6 py-3 rounded-full font-semibold hover:bg-green-50 transition">
                 Join Now
-              </a>
+              </Link>
             </div>
           </div>
 

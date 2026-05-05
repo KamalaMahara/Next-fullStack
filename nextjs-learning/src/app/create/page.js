@@ -15,16 +15,16 @@ const Create = () => {
           <div>
             <label
               htmlFor="title"
-              className="block text-sm font-medium text-gray-700 mb-2"
+              className="block text-sm font-bold text-gray-700 mb-2"
             >
               Recipe Title
             </label>
-            <input
+            <input 
               type="text"
               id="title"
               name="title"
-              placeholder="e.g. Spaghetti Carbonara"
-              className="w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-green-500 focus:outline-none"
+              placeholder=" e.g. Spaghetti Carbonara"
+              className="w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-green-500 focus:outline-none text-gray-600"
             />
           </div>
 
@@ -32,7 +32,7 @@ const Create = () => {
           <div>
             <label
               htmlFor="description"
-              className="block text-sm font-medium text-gray-700 mb-2"
+              className="block text-base font-bold text-gray-700 mb-2"
             >
               Description
             </label>
@@ -41,7 +41,7 @@ const Create = () => {
               name="description"
               rows="3"
               placeholder="Write a short description..."
-              className="w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-green-500 focus:outline-none"
+              className="w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-green-500 focus:outline-none text-gray-600"
             ></textarea>
           </div>
 
@@ -49,7 +49,7 @@ const Create = () => {
           <div>
             <label
               htmlFor="ingredients"
-              className="block text-sm font-medium text-gray-700 mb-2"
+              className="block text-sm font-bold text-gray-700 mb-2"
             >
               Ingredients
             </label>
@@ -58,7 +58,7 @@ const Create = () => {
               name="ingredients"
               rows="4"
               placeholder="List ingredients separated by commas..."
-              className="w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-green-500 focus:outline-none"
+              className="w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-green-500 focus:outline-none text-gray-600"
             ></textarea>
           </div>
 
@@ -66,7 +66,7 @@ const Create = () => {
           <div>
             <label
               htmlFor="instructions"
-              className="block text-sm font-medium text-gray-700 mb-2"
+              className="block text-sm font-bold text-gray-700 mb-2"
             >
               Instructions
             </label>
@@ -75,7 +75,7 @@ const Create = () => {
               name="instructions"
               rows="5"
               placeholder="Step-by-step cooking instructions..."
-              className="w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-green-500 focus:outline-none"
+              className="w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-green-500 focus:outline-none text-gray-600"
             ></textarea>
           </div>
 
@@ -83,7 +83,7 @@ const Create = () => {
           <div>
             <label
               htmlFor="image"
-              className="block text-sm font-medium text-gray-700 mb-2"
+              className="block text-sm font-bold text-gray-700 mb-2"
             >
               Upload Image
             </label>
@@ -91,7 +91,7 @@ const Create = () => {
               type="file"
               id="image"
               name="image"
-              className="w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-green-500 focus:outline-none"
+              className="w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-green-500 focus:outline-none text-gray-600"
             />
           </div>
 
