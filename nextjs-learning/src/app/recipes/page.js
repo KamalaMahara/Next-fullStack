@@ -1,3 +1,5 @@
+import Footer from "../components/Footer";
+import Navbar from "../components/Navbar";
 import Recipe from "../components/Recipe";
 
 
@@ -8,7 +10,8 @@ import Recipe from "../components/Recipe";
 export default function Recipes() {
   return (
     <>
-      <div className="bg-[#FEFDDF] min-h-screen">
+     <Navbar />
+      <div className="bg-[#FEFDDF] min-h-screen mt-16">
         {/* Section Heading */}
         <div className="w-full text-center py-8">
           <h1 className="text-3xl font-bold text-gray-800">Explore Our Delicious Recipes</h1>
@@ -17,7 +20,7 @@ export default function Recipes() {
         <Recipe />
       </div>
       
-      
+      <Footer />
     </>
   )
 }
