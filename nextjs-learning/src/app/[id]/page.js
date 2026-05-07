@@ -3,6 +3,7 @@
 import { useState } from "react";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
+import Link from "next/link";
 
 const RecipeDetail = () => {
   const images = [
@@ -114,16 +115,15 @@ const RecipeDetail = () => {
                 </div>
 
                 {/* Buttons */}
-                <div className="flex flex-wrap gap-3">
-                  <button className="flex-1 bg-green-600 text-white py-2 rounded-lg font-medium hover:bg-green-700 transition">
-                    Save
-                  </button>
-
-                  <button className="flex-1 bg-yellow-500 text-white py-2 rounded-lg font-medium hover:bg-yellow-600 transition">
+                <div className="flex flex-wrap justify-evenly gap-4">
+                  
+                 <Link href={`/${1}/edit`} className="flex-1">
+                  <button className="w-full bg-yellow-500 text-white py-2 rounded-lg font-medium hover:bg-yellow-600 transition">
                     Edit
                   </button>
+                  </Link>
 
-                  <button className="flex-1 bg-red-500 text-white py-2 rounded-lg font-medium hover:bg-red-600 transition">
+                  <button className="flex-1 bg-red-500 text-white py-2 rounded-lg  font-medium hover:bg-red-600 transition">
                     Delete
                   </button>
                 </div>

@@ -20,7 +20,7 @@ export default function Recipes() {
         <Recipe />
       </div>
       
-      <Footer />
+      
     </>
   )
 }
