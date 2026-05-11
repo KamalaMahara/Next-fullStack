@@ -2,14 +2,16 @@ import { recipesTable } from "../../../db/schema";
 import {db} from "../../../db/db";
 
 export async function GET(){
-   return response.json({
-    message:"hello world"
+  const datas= await db.select().from(recipesTable)
+   return Response.json({
+    recipes:datas
    })
 }
 
-export async function POST(request){
-  let data = await request.join();
+export async function POST(Request){
+ 
   try{
+     const data = await Request.json();
     await db.insert(recipesTable).values(data)
     return Response.json({
       message:"Recipe data inserted successfully"
@@ -20,3 +22,5 @@ export async function POST(request){
     }, { status: 500 });
   }
   }
+
+  
