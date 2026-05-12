@@ -1,13 +1,20 @@
-import Footer from "../components/Footer";
+
 import Navbar from "../components/Navbar";
 import Recipe from "../components/Recipe";
 
-
+ const fetchRecipe = async () => {
+    const response = await fetch("http://localhost:3000/api/recipe/", {
+      cache: "no-store"
+    });
+    console.log(response)
+  };
 
 
 
 
 export default function Recipes() {
+   const recipes = fetchRecipe();
+   console.log(recipes)
   return (
     <>
      <Navbar />

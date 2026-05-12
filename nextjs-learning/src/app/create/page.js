@@ -1,14 +1,9 @@
-import { useEffect } from "react";
+
 import Form from "../components/Form";
 import Navbar from "../components/Navbar";
 
 const Create = () => {
-  const fetchRecipe =() => {
-     axios.get("http://localhost:3000 api/recipe/")
-  }
-  useEffect(()=>{
-    fetchRecipe()
-  },[])
+ 
   return (
     <>
      <Navbar />

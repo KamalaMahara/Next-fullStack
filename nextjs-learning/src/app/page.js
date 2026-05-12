@@ -7,7 +7,7 @@ import Footer from "./components/Footer";
 import AboutSection from "./about section/AboutSection";
 
 import ShareRecipes from "./components/ShareRecipes";
-import Recipes from "./recipes/page";
+ import Recipes from "../app/recipes/page"
 
 
 
