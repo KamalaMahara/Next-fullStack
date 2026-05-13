@@ -1,8 +1,8 @@
 import Link from "next/link"
 
-const Card = () => {
+const Card = ({ recipes }) => {
   return (
-    <Link href="/1">
+    <Link href={`/${recipes?.id}`}>
       <div className="max-w-sm bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300">
         <img
           className="w-full h-48 object-cover"
@@ -11,16 +11,15 @@ const Card = () => {
         />
 
         <div className="p-5">
-          <h2 className="text-xl font-semibold text-gray-800 mb-2">Delicious Pasta</h2>
+          <h2 className="text-xl font-semibold text-gray-800 mb-2">{recipes?.title}</h2>
 
           <p className="text-gray-600 text-sm mb-4">
-            A quick and easy pasta recipe with fresh ingredients and rich flavors.
+            {recipes?.description}
           </p>
 
           <div className="flex flex-wrap gap-2 mb-4">
-            <span className="px-3 py-1 text-xs bg-green-100 text-green-700 rounded-full">Vegetarian</span>
-            <span className="px-3 py-1 text-xs bg-yellow-100 text-yellow-700 rounded-full">30 min</span>
-            <span className="px-3 py-1 text-xs bg-red-100 text-red-700 rounded-full">Italian</span>
+            <span className="px-3 py-1 text-xs bg-green-100 text-green-700 rounded-full">{recipes?.subtitle}</span>
+
           </div>
 
           <div className="flex justify-between items-center">

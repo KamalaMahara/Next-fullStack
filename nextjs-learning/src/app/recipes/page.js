@@ -2,29 +2,20 @@
 import Navbar from "../components/Navbar";
 import Recipe from "../components/Recipe";
 
- const fetchRecipe = async () => {
-    const response = await fetch("http://localhost:3000/api/recipe/", {
+
+export default  async function Recipes() {
+     const response = await fetch("http://localhost:3000/api/recipe/", {
       cache: "no-store"
     });
-    console.log(response)
-  };
-
-
-
-
-export default function Recipes() {
-   const recipes = fetchRecipe();
+    const data = await response.json();
+  const recipes=data.recipes
    console.log(recipes)
   return (
     <>
      <Navbar />
       <div className="bg-[#FEFDDF] min-h-screen mt-16">
-        {/* Section Heading */}
-        <div className="w-full text-center py-8">
-          <h1 className="text-3xl font-bold text-gray-800">Explore Our Delicious Recipes</h1>
-          <p className="text-gray-600 mt-2">Discover a variety of recipes to satisfy your cravings.</p>
-        </div>
-        <Recipe />
+        recipes.
+        <Recipe recipes={recipes} />
       </div>
       
       
