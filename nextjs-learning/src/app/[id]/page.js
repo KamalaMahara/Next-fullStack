@@ -47,7 +47,7 @@ export default async function SingleRecipePage({ params }) {
                   </p>
 
                   <div className="flex flex-wrap justify-evenly gap-4">
-                    <Link href={`/recipes/${recipe?.id}/edit`} className="flex-1">
+                    <Link href={`/edit/${recipe?._id}`} className="flex-1">
                       <button className="w-full bg-yellow-500 text-white py-2 rounded-lg font-medium hover:bg-yellow-600 transition">
                         Edit
                       </button>

@@ -1,27 +1,52 @@
 "use client"
 
 import React, { useState } from "react";
-
+import { useRouter } from "next/navigation"
 
 
 
 
 const Form = ({ text }) => {
+  const router = useRouter();
   const [data, setData] = useState({
-    title: "",
+    "title": "",
     "subtitle": "",
     "description": ""
   })
   const handleChange = (e) => {
     const { name, value } = e.target;
+    console.log(name, value)
     setData({
       ...data,
       [name]: value
     })
   }
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    try {
+      const response = await fetch("/api/recipe", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json"
+        },
+        body: JSON.stringify(data)
+      });
+
+      if (!response.ok) {
+        throw new Error("Failed to create recipe");
+      }
+
+      alert("Recipe created successfully");
+      router.push("/recipes");
+    } catch (error) {
+      console.error(error);
+      alert("Something went wrong while creating the recipe");
+    }
+  };
+
   return (
     <>
-      <form className="bg-white shadow-md rounded-lg p-6 space-y-6">
+      <form className="bg-white shadow-md rounded-lg p-6 space-y-6" onSubmit={handleSubmit}>
         {/* Recipe Title */}
         <div>
           <label
