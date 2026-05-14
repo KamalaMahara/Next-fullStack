@@ -6,8 +6,7 @@ import Footer from "../components/Footer";
 import DeleteRecipe from "./components/DeleteRecipe";
 
 export default async function SingleRecipePage({ params }) {
-  const { id } = await  params; // ✅ destructure correctly
-
+  const { id } = await  params; 
   try {
     const response = await fetch(`http://localhost:3000/api/recipe/${id}`, {
       cache: "no-store",
@@ -23,21 +22,21 @@ export default async function SingleRecipePage({ params }) {
     return (
       <>
         <Navbar />
-        <div className="bg-gradient-to-br from-gray-50 to-gray-100 min-h-screen flex items-center justify-center">
-          <div className="max-w-5xl mx-auto px-6 py-12">
+        <div className="bg-gradient-to-br from-gray-50 to-gray-100 min-h-screen flex items-center justify-center gap-4">
+          <div className="max-w-5xl  px-2 py-12">
             <div className="flex flex-wrap -mx-6">
-              {/* 🍽 IMAGE SECTION */}
-              <div className="w-full md:w-1/2 px-6 mb-10">
-                <div className="bg-white rounded-2xl shadow-md p-4">
+              {/*  IMAGE SECTION */}
+              <div className="w-full md:w-1/2  mb-4 ">
+                
                   <img
-                    src="/receipe.png"
+                    src="https://i.pinimg.com/736x/65/95/77/659577601db80b1eaf9dc497f30e02df.jpg"
                     alt={recipe?.title}
-                    className="w-full h-[450px] object-cover rounded-xl transition duration-300"
+                    className="w-screen h-[500px] object-cover rounded-xl transition duration-300"
                   />
-                </div>
+                
               </div>
 
-              {/* 🧾 DETAILS SECTION */}
+              {/*  DETAILS SECTION */}
               <div className="w-full md:w-1/2 px-6">
                 <div className="bg-white rounded-2xl shadow-md p-6">
                   <h1 className="text-4xl font-bold text-gray-800 mb-4">

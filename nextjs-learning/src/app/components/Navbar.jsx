@@ -12,10 +12,10 @@ export default function Navbar() {
             <div className="flex-shrink-0 flex items-center">
               <a href="/" className="flex items-center gap-2">
                 <Image
-                  src="/receipe.png"
+                  src="/favicon.ico"
                   alt="RecipeShare Logo"
                   width={100}
-                  height={60}
+                  height={100}
                   className="object-contain"
                 />
                 <span className="text-xl font-bold text-green-600">

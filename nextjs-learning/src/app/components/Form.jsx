@@ -1,6 +1,24 @@
-import React from 'react'
+"use client"
+
+import React, { useState } from "react";
+
+
+
+
 
 const Form = ({ text }) => {
+  const [data, setData] = useState({
+    title: "",
+    "subtitle": "",
+    "description": ""
+  })
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setData({
+      ...data,
+      [name]: value
+    })
+  }
   return (
     <>
       <form className="bg-white shadow-md rounded-lg p-6 space-y-6">
@@ -18,6 +36,22 @@ const Form = ({ text }) => {
             name="title"
             placeholder=" e.g. Spaghetti Carbonara"
             className="w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-green-500 focus:outline-none text-gray-600"
+            onChange={handleChange}
+          />
+        </div>
+        <div>
+          <label
+            htmlFor="subtitle"
+            className="block text-sm font-bold text-gray-700 mb-2"
+          >
+            Recipe Subtitle
+          </label>
+          <input
+            type="text"
+            id="subtitle"
+            name="subtitle"
+            placeholder=" e.g. Spaghetti Carbonara"
+            className="w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-green-500 focus:outline-none text-gray-600" onChange={handleChange}
           />
         </div>
 
@@ -34,59 +68,11 @@ const Form = ({ text }) => {
             name="description"
             rows="3"
             placeholder="Write a short description..."
-            className="w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-green-500 focus:outline-none text-gray-600"
+            className="w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-green-500 focus:outline-none text-gray-600" onChange={handleChange}
           ></textarea>
         </div>
 
-        {/* Ingredients */}
-        <div>
-          <label
-            htmlFor="ingredients"
-            className="block text-sm font-bold text-gray-700 mb-2"
-          >
-            Ingredients
-          </label>
-          <textarea
-            id="ingredients"
-            name="ingredients"
-            rows="4"
-            placeholder="List ingredients separated by commas..."
-            className="w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-green-500 focus:outline-none text-gray-600"
-          ></textarea>
-        </div>
 
-        {/* Instructions */}
-        <div>
-          <label
-            htmlFor="instructions"
-            className="block text-sm font-bold text-gray-700 mb-2"
-          >
-            Instructions
-          </label>
-          <textarea
-            id="instructions"
-            name="instructions"
-            rows="5"
-            placeholder="Step-by-step cooking instructions..."
-            className="w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-green-500 focus:outline-none text-gray-600"
-          ></textarea>
-        </div>
-
-        {/* Image Upload */}
-        <div>
-          <label
-            htmlFor="image"
-            className="block text-sm font-bold text-gray-700 mb-2"
-          >
-            Upload Image
-          </label>
-          <input
-            type="file"
-            id="image"
-            name="image"
-            className="w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-green-500 focus:outline-none text-gray-600"
-          />
-        </div>
 
         {/* Submit Button */}
         <div className="text-center">

@@ -4,7 +4,7 @@ import { eq } from "drizzle-orm";
 
 export async function GET(request, context) {
   try {
-    // ✅ Await context.params
+    
     const { id } = await context.params;
 
     const recipeData = await db

@@ -14,7 +14,7 @@ const DeleteRecipe = ({ recipeId }) => {
     }
 
     try {
-      const response = await fetch("http://localhost:3000/api/recipe" + recipeId, {
+      const response = await fetch("http://localhost:3000/api/recipe/" + recipeId, {
         method: "DELETE"
       })
       if (!response.ok) {
@@ -27,11 +27,12 @@ const DeleteRecipe = ({ recipeId }) => {
       alert("error deleting the recipe: " + error.message)
     }
 
-    return (
-      <button className="flex-1 bg-red-500 text-white py-2 rounded-lg font-medium hover:bg-red-600 transition" onClick={deleteRecipe}>
-        Delete
-      </button>
-    )
+
   }
+  return (
+    <button className="flex-1 bg-red-500 text-white py-2 rounded-lg font-medium hover:bg-red-600 transition" onClick={deleteRecipe}>
+      Delete
+    </button>
+  )
 }
 export default DeleteRecipe
